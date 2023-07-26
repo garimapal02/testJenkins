@@ -9,6 +9,9 @@ pipeline {
     stage("Test"){
       steps{
         echo "Garima Test"
+        sh '''
+        python3 gptest.py
+        '''
       }
     }
     stage("Deploy"){
